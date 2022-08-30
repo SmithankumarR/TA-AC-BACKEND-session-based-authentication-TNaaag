@@ -12,20 +12,22 @@
 </head>
 
 <body>
-    <form action="" method="POST">
+    <h1 class="text-blue-400 font-bold text-2xl text-center my-12" >Login Here</h1>
+
+    <form action="/users/login" method="POST">
         <fieldset>
             <div>
-                <label for="email">Email:</label>
+                <label for="email">Email :</label>
                 <input type="email" id="email" name="email" placeholder="enter the email"
                     class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm">
             </div>
-            <div>
-                <label for="password"> Password</label>
+            <div class="my-3">
+                <label for="password"> Password :</label>
                 <input type="password" id="password" name="password" placeholder="enter the password"
                     class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm">
             </div>
             <button type="submit"
-                class="inline-block px-5 py-3 ml-3 text-sm font-medium text-white bg-blue-500 rounded-lg"
+                class="block px-5 my-5 py-3 mx-auto text-sm font-medium text-white bg-blue-500 rounded-lg"
                 value="register">
                 sign in
             </button>

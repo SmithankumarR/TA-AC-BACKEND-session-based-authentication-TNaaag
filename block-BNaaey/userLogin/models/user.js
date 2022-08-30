@@ -18,9 +18,12 @@ var userSchema = new Schema(
 userSchema.pre('save', function (next) {
   console.log(this.password);
   if (this.password && this.isModified('password')) {
+    console.log(this, "before hashing");
     bcrypt.hash(this.password, 10, (err, hashed) => {
       if (err) return next(err);
       this.password = hashed;
+    console.log(this, "after hashing");
+
       return next();
     });
   } else {
@@ -28,7 +31,7 @@ userSchema.pre('save', function (next) {
   }
 });
 
-userSchema.methods.verifyPassword = function (password, cb) {
+userSchema.methods.verifyPassword = function (password,cb) {
   bcrypt.compare(password, this.password, (err, result) => {
     return cb(err, result);
   });
