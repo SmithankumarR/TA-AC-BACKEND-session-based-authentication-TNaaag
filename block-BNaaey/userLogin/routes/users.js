@@ -18,34 +18,34 @@ router.post('/register', (req, res, next) => {
   });
 });
 router.post('/login', (req, res, next) => {
-  // check user credentials
+  // validate user credentials
   var { email, password } = req.body;
+
   if (!email || !password) {
-    res.redirect('/users/login');
+    return res.redirect('/users/login');
   }
   // find user
   User.findOne({ email }, (err, user) => {
+    console.log(req.body, user);
     if (err) return next(err);
     // no user
     if (!user) {
-      res.redirect('/users/login');
+      return res.redirect('/users/login');
     }
     // compare password
     user.verifyPassword(password, (err, result) => {
       console.log(err, result);
       if (err) return next(err);
       if (!result) {
-        res.redirect('/users/login');
+        return res.redirect('/users/login');
       }
+      console.log('user logged in');
+
+      // persist logged in user information
+      req.session.userId = user.id;
+      res.redirect('/dashboard');
     });
-
-    // persist logged in user information
-
-    console.log(req.session);
-    req.session.userId = user.id;
-    res.send(" Successfully Login")
-    res.redirect('/users/login');
   });
-});
+}); 
 
 module.exports = router;
