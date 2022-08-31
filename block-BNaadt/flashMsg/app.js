@@ -8,12 +8,14 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo');
 var flash = require("connect-flash");
 
+require('dotenv').config();
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 // connect to db
 mongoose.connect(
-  'mongodb://127.0.0.1:27017/userLogin',
+  'mongodb://127.0.0.1:27017/flashMsg',
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     console.log(err ? err : 'Connected to DB');
@@ -32,14 +34,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// add session
+// add or create session
 app.use(
   session({
     secret: process.env.SECRET,
     saveUninitialized: false,
     resave: false,
     store: MongoStore.create({
-      mongoUrl: 'mongodb://localhost:27017/userLogin',
+      mongoUrl: 'mongodb://localhost:27017/flashMsg',
     })
   })
 );
