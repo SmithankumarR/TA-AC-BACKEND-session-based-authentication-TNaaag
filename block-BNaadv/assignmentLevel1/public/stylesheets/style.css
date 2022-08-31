@@ -1,0 +1,12 @@
+form {
+    max-width: 700px;
+    margin: 5rem auto;
+    padding: 2rem;
+    display: block;
+    border: 2px solid rgb(194, 193, 193);
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgb(197, 196, 196);
+}
+h1{
+    text-transform: capitalize;
+}
