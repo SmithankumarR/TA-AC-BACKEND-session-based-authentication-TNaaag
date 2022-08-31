@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/tailwind.css' />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1 class=" my-5 text-4xl text-center text-yellow-500">
+    <%= title %>
+  </h1>
+  <p class="text-center text-blue-400 font-semibold"> Learn with Love 🤟
+  </p>
+  <div class="flex justify-end mt-6">
+    <button value="Register" class="block px-5 my-5 py-3 mx-auto text-sm font-medium text-white bg-blue-500 rounded-lg">
+      <a href="/users/register">Register</a>
+    </button>
+    <button type="submit" class="block px-5 my-5 py-3 mx-auto text-sm font-medium text-white bg-blue-500 rounded-lg"
+      value="Login">
+      <a href="/users/login">Login</a>
+    </button>
+  </div>
+</body>
+
+</html>
