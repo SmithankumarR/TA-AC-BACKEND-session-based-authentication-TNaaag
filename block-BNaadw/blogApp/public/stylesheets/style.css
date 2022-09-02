@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;1,500&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --primary: rgb(234, 84, 52);
+  --secondary: rgb(255, 255, 255);
+  --text-light: rgb(167, 166, 166);
+  --text-dark: rgb(85, 73, 69);
+  --bg-1: rgb(254, 249, 247);
+}
+
+html {
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  background: linear-gradient(to right, rgb(189, 197, 207), rgb(147, 159, 175));
+}
+
+/* container */
+.container {
+  max-width: 1370px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* flex{*/
+.flex {
+  display: flex;
+}
+
+.jcb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.flex-48 {
+  flex: 0 0 46%;
+}
+
+a {
+  color: white !important;
+  margin-left: 1rem;
+  font-weight: 600;
+}
+a:hover {
+  color: rgb(249, 142, 60) !important;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.jcb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
+
+.navbar {
+  background-color: rgb(17, 24, 39);
+  color: white;
+  padding: 1rem;
+}
+
+.listArticles {
+  background-color: rgb(17, 24, 39);
+}
+
+.articleDetails {
+  margin: 4rem auto;
+  background-color: rgb(251, 251, 194);
+  box-shadow: 0 0 10px solid rgb(24, 21, 21);
+  padding: 2rem;
+  border: 2px solid;
+  border-radius: 2rem;
+  max-width: 750px;
+}
+
+.comments {
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+.articles form h1, .comments form h1 {
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+.articles fieldset, .comments fieldset {
+  display: block;
+  padding: 2rem;
+  margin: 5rem auto;
+  max-width: 500px;
+  border: 3px solid rgb(73, 146, 243);
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgb(100, 169, 254);
+}
+.articles input,
+.articles textarea, .comments input,
+.comments textarea {
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 3rem;
+  display: block;
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.btn {
+  display: block;
+  padding: 0.75rem 3rem;
+  border-radius: 2rem;
+  margin: 0 auto;
+}
+
+.btn-primary {
+  background-color: black;
+  color: red;
+}
+
+.register,
+.login {
+  max-width: 700px;
+  margin: 5rem auto;
+  padding: 2rem;
+  display: block;
+  border: 2px solid rgb(194, 193, 193);
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgb(197, 196, 196);
+}
+.register h1,
+.login h1 {
+  text-transform: capitalize;
+}/*# sourceMappingURL=style.css.map */

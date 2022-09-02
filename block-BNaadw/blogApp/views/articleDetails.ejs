@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>article details</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body class="bg-blue-300">
+  <% include partials/header %>
+    <section>
+      <div class="max-w-screen-xl px-4 py-32 mx-auto lg:h-screen lg:items-center lg:flex">
+        <div class="max-w-xl mx-auto text-center articleDetails">
+          <h1 class="text-3xl font-extrabold sm:text-5xl">
+            <%= article.title %>
+          </h1>
+          <strong class="font-extrabold text-red-700 sm:block">
+            Key Tags : {
+            <% article.tags.forEach(t=> { %>
+              <%= t %>
+                <% }) %>
+                  }
+          </strong>
+
+          <p class="mt-4 sm:leading-relaxed sm:text-xl">
+            <%= article.description %>
+          </p>
+          <h5 class="text-left mt-10 ml-40 text-2xl">
+            <%= article.likes ? article.likes : 0 %> 💝 
+          </h5>
+          <div class="flex flex-wrap justify-center gap-4 mt-8">
+            <a class="block w-full px-12 py-3 text-sm font-medium text-white bg-blue-500 rounded shadow sm:w-auto active:bg-blue-300 hover:bg-blue-700 focus:outline-none focus:ring"
+              href="/articles/<%= article.id %>/like">
+              Like
+            </a>
+            <a class="block w-full px-12 py-3 text-sm font-medium text-white bg-green-500 rounded shadow sm:w-auto active:bg-green-300 hover:bg-green-700 focus:outline-none focus:ring"
+              href="/articles/<%= article.id %>/edit">
+              Edit
+            </a>
+            <a class="block w-full px-12 py-3 text-sm font-medium text-white bg-red-500 rounded shadow sm:w-auto active:bg-red-300 hover:bg-red-700 focus:outline-none focus:ring"
+              href="/articles/<%= article.id %>/delete">
+              Delete
+            </a>
+          </div>
+          <div class="comments bg-blue-900 rounded-2xl">
+            <form class="w-2/3 mt-2 mb-10 my-auto" action="/articles/<%= article.id %>/comments" method="POST">
+              <textarea class="form-textarea textygray-500" name="text" rows="3" placeholder="Enter comments"
+                value="Enter Comments"></textarea>
+              <input type="text" name="author" placeholder="Add Author">
+              <input class="btn-green" type="submit" value="Add Comment">
+            </form>
+            <div class="bg-gray-100 rounded p-2 my-2">
+              <h2 class="text-yellow-700 font-extrabold">Comments</h2>
+              <hr class="mb-4">
+              <% article.comments.forEach(comment => { %>
+                <div class="pb-5">
+                  <h3 class="text-black-500 my-1 font-extrabold"><%= comment.text %>
+                  </h3>
+                  <p class="text-green-500 my-3" ><%= comment.author %></p>
+                  <h5 class="text-left mt-5  ml-40 text-l">
+                    <%= comment.likes ? comment.likes : 0 %> 💙 
+                  </h5>
+                  <a href="/comments/<%= comment.id %>/like">
+                    <button class="text-xs text-white bg-blue-500 px-2 rounded">like</button>
+                  </a>
+                  <a href="/comments/<%= comment.id %>/edit">
+                    <button class="text-xs text-white bg-green-500 px-2 rounded">Edit</button>
+                  </a>
+                  <a href="/comments/<%= comment.id %>/delete">
+                    <button class="text-xs text-white bg-red-500 px-2 rounded">delete</button>
+                  </a>
+                </div>
+                <% }) %>
+            </div>
+          </div>
+    </section>
+
+</body>
+
+</html>
