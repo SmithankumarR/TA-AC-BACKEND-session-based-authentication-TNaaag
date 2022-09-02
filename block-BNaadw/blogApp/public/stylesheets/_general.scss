@@ -1,0 +1,60 @@
+// variables
+:root {
+    
+    --primary: rgb(234, 84, 52);
+    --secondary: rgb(255, 255, 255);
+    --text-light: rgb(167, 166, 166);
+    --text-dark: rgb(85, 73, 69);
+    --bg-1: rgb(254, 249, 247);
+  }
+
+// general
+
+  html {
+    font-size: 16px;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Raleway", sans-serif;
+    line-height: 1.5;
+    background: linear-gradient(to right,rgb(189,197,207),rgb(147,159,175));
+  }
+  /* container */
+  .container {
+    max-width: 1370px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  /* flex{*/
+  .flex {
+    display: flex;
+  }
+  .jcb {
+    justify-content: space-between
+    ;
+  }
+  .aic{
+    align-items: center;
+  }
+  .wrap {
+    flex-wrap: wrap;
+  }
+  .flex-48{
+    flex: 0 0 46%;
+  }
+a {
+    color: white !important;
+    margin-left: 1rem;
+    font-weight: 600;
+
+    &:hover{
+        color: rgb(249, 142, 60) !important;
+        
+    }
+}
