@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+        <body class="articles">
+            <h1 class="text-blue-700 text-2xl text-center font-bold my-4 ">Add Your Article Details</h1>
+            <form action="/articles" method="Post" class="bg-gray-700" >
+                <div>
+                    <label for="title" class="sr-only">Title</label>
+                    <input type="title" name="title" class="w-full p-4 pr-12 text-sm border-gray-200
+             rounded-lg shadow-sm" placeholder="Enter title" />
+                </div>
+                <div>
+                    <label for="description" class="sr-only">Description</label>
+                    <textarea type="description" name="description"
+                        class="w-full p-4 pr-12 row-10 text-sm border-black-200 rounded-lg shadow-sm my-2"
+                        placeholder="Enter description"> Enter description</textarea>
+
+                </div>
+                <div>
+                    <label for="author" class="sr-only">Author</label>
+                    <input type="author" name="author" class="w-full p-4 pr-12 text-sm border-black-200 rounded-lg shadow-sm"
+                        placeholder="Enter author" />
+                </div>
+                <button type="submit" value="Add Article" class="btn btn-pri my-2 mx-auto block"> Add Article</button>
+            </form>
+</body>
+</html>
