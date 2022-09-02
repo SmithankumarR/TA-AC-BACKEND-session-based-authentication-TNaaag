@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>articleDetails</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body class="bg-blue-200 w-full articles ">
+    <% include partials/header %>
+        <form action="/articles" method="POST" class="xl-container ">
+            <h1 class="text-center font-bold"> Add Your Article Here...</h1>
+            <fieldset>
+                <input type="text" name="title" placeholder="Enter Title" class="form-control">
+                <textarea type="text" name="description" placeholder="Enter the description" rows="5" ></textarea> 
+                <input type="text" name="tags" placeholder="Enter tags" class="form-control">
+                <input type="text" name="author" placeholder="Enter Author Name" class="form-control">
+                <input type="submit" value="Add Article" class="btn btn-primary">
+            </fieldset>
+        </form>
+</body>
+
+</html>

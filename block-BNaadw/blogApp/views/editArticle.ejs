@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>articleDetails</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body class="bg-yellow-200 w-full articles">
+    <% include partials/header %>
+        <form action="/articles/<%= article.id %>" method="POST" class="xl-container">
+            <h1 class="text-center font-bold"> Edit Your Article Here...</h1>
+            <fieldset>
+
+                    <input type="text" name="title" placeholder="Enter the title" value = "<%= article.title %>" class="form-control">
+                    <textarea type="text" name="description" placeholder="Enter the description" rows="5" value="<%= article.description %>"><%= article.description %> </textarea> 
+                    <input type="text" name="tags" placeholder="Enter the tags" value="<%= article.tags %>" class="form-control">
+                    <input type="text" name="author" placeholder= "Enter author Name" value="<%= article.author %>" class="form-control">
+                    <input type="submit" value="update Article" class="btn btn-primary">
+
+            </fieldset>
+        </form>
+</body>
+
+</html>
